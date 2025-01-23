@@ -7,17 +7,18 @@ export default function Main(props) {
     const monument = props.item.monument;
     const description = props.item.description;
     const date =props.item.date;
+    const url = props.item.url
 
     return (
         <div >
             <div className="bloc">
 
-                < img src={image} alt='' className='bloc-image'/>
+                < img src={image} alt={monument} className='bloc-image'/>
                 <div className='bloc-info'>
                     <div className='info1'>
-                        <img src={map} alt=''  />
+                        <img src={map} alt="logo-map"  />
                         <p className='country'>{country}</p>
-                        <a href="">View on Google Maps</a>
+                        <a href={url}>View on Google Maps</a>
                     </div>
                     <h2 className='monument'>{monument}</h2>
 
